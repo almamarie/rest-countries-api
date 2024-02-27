@@ -29,6 +29,8 @@
 --default-font-size: 1.4rem;
 --font-size__detail-page: 1.8rem;
 
+--color-bg__inner: var(--color-dark-blue__shade);
+
 /* Border radius */
 --default-border-radius: .5rem;
 }
@@ -37,7 +39,7 @@
 @font-face {
   font-family: "Nunito";
   src: url("./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf") format("truetype");
-  font-weight: 400 500;
+  font-weight: 400 500 800;
   font-style: normal;
   font-variation-settings: "wght" 400 500;
 }
