@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./CustomSelect.module.css";
+import HomeContext from "../../../contexts/home-context";
 
 const CustomSelect = () => {
+  const homeCtx = useContext(HomeContext);
   const [showOptions, setShowOptions] = useState(false);
   const [currentOption, setCurrentOption] = useState("");
 
@@ -14,6 +16,7 @@ const CustomSelect = () => {
       console.log("option: ", option);
       setShowOptions(false);
       setCurrentOption(option);
+      homeCtx.fetchCountriesByRegion(option);
     };
   };
 

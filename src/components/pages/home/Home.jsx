@@ -4,6 +4,7 @@ import Inputs from "./Inputs";
 import Countries from "./Countries";
 
 const Home = () => {
+  console.log("Rerendering");
   return (
     <div className={styles.wrapper}>
       <div className={styles.Inputs}>

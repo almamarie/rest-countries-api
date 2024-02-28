@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import styles from "./Inputs.module.css";
 import CustomSelect from "./CustomSelect";
+import HomeContext from "../../../contexts/home-context";
 
 const Inputs = () => {
+  const homeCtx = useContext(HomeContext);
+  const inputRef = useRef();
+  const { countriesNames } = homeCtx;
+
+  const searchHandler = (event) => {
+    event.preventDefault();
+
+    const searchName = inputRef.current.value;
+    homeCtx.searchCountry(searchName);
+  };
   return (
-    <div className={styles.wrapper}>
+    <form className={styles.wrapper} onSubmit={searchHandler}>
       <div className={styles.inputs}>
         <div className={styles["wrapper--search-input"]}>
           <svg
@@ -22,15 +33,25 @@ const Inputs = () => {
             />
           </svg>
           <input
+            ref={inputRef}
             className={styles.input}
             type="search"
             placeholder="Search for a country..."
+            list="countries"
           />
         </div>
 
         <CustomSelect />
+        <datalist id="countries">
+          {countriesNames.map((con, index) => (
+            <option key={index} value={con}>
+              {con}
+            </option>
+          ))}
+        </datalist>
+        <button type="submit" className="hide"></button>
       </div>
-    </div>
+    </form>
   );
 };
 
