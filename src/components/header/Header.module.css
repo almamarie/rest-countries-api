@@ -17,6 +17,11 @@
     justify-content: space-between;
 
     align-items: center;
+
+    position: static;
+
+    box-shadow: var(--default-box-shadow);
+
 }
 
 .wrapper  h1 {

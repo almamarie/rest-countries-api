@@ -12,7 +12,7 @@ const Header = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          class={styles.icon}
+          className={styles.icon}
         >
           <path
             strokeLinecap="round"

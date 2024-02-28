@@ -1,0 +1,57 @@
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+.wrapper--search-input{
+    height: 4.8rem;
+    width: 48rem;
+
+    padding: 0 2.4rem;
+
+    background-color: var(--color-bg__inner);
+
+    border-radius: var(--default-border-radius);
+
+    box-shadow: var(--default-box-shadow);
+
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+}
+
+
+.search-icon{
+    width: 1.8rem;
+}
+
+.inputs{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.input{
+   background-color: var(--color-bg__inner);
+   
+   border: none;
+
+   width: 38rem;
+}
+
+
+.input::placeholder{
+    color: var(--color-white);
+    font-size: 1.2rem;
+}
+
+.input:focus{
+    border: none; 
+    outline: none; 
+}
