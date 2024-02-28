@@ -10,6 +10,7 @@
 .wrapper {
     background-color: var(--color-bg__inner);
     height: 8rem;
+    width: 100%;
 
     padding: 0 8rem;
 
@@ -18,7 +19,7 @@
 
     align-items: center;
 
-    position: static;
+    position: fixed;
 
     box-shadow: var(--default-box-shadow);
 

@@ -4,7 +4,7 @@ import CustomSelect from "./CustomSelect";
 
 const Inputs = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.inputs}>
         <div className={styles["wrapper--search-input"]}>
           <svg
