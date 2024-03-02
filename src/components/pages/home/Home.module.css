@@ -9,3 +9,14 @@
 .wrapper{
     padding: 4.8rem 8rem 0 8rem;
 }
+
+
+/* ==================================== 
+   =============== 620 px =============
+   ==================================== */
+@media (max-width:38.75em) {
+    .wrapper{
+         padding-left: 1.6rem;
+         padding-right: 1.6rem;
+    }
+}

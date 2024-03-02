@@ -78,7 +78,7 @@ export const HomeContextProvider = (props) => {
     setIsLoading(true);
 
     const response = await fetch(
-      `https://restcountries.com/v3.1/name/${country}?fullText=true`
+      `https://restcountries.com/v3.1/name/${country}?fullText=true&fields=languages,flags,capital,name,population,region,subregion,currencies,languages,tld,borders`
     );
     if (!response.ok) {
       setIsLoading(false);

@@ -22,9 +22,7 @@
 
 .img{
     width: 100%;
-    height: 20rem;
-
-    
+    height: 20rem;  
 }
 
 .description {
@@ -41,4 +39,57 @@
 
 .link{
     text-decoration: none;
+}
+
+
+/* ==================================== 
+   =============== 620 px =============
+   ==================================== */
+@media (max-width:38.75em) {
+    .wrapper{
+         width: 90%;
+        height: 50rem;
+         margin: 0 auto;
+         margin-bottom: 2.4rem;
+    }
+
+    .img{
+        width: 100%;
+        height: 30rem;  
+    }
+
+    .description h3{
+        font-size: 2.4rem;
+    }
+
+    .description span {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ==================================== 
+   =============== 375 px =============
+   ==================================== */
+@media (max-width:26.875em) {
+    .wrapper{
+        width: 90%;
+        height: 40rem;
+        margin: 0 auto;
+        margin-bottom: 2.4rem;
+    }
+
+    .img{
+        width: 100%;
+        height: 20rem;  
+    }
+
+    .description h3{
+        font-size: 2.4rem;
+    }
+
+    .description span {
+        font-size: 2rem;
+    }
 }

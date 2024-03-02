@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
 import Home from "./components/pages/home/Home";
-import Country from "./components/pages/country/Country";
+import Country from "./components/pages/country/CountryDetails";
 import MainError from "./components/pages/error/MainError";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           path: "countries/",
           element: <Home />,
         },
-        { path: "countries/:countryFullName", element: <Country /> },
+        { path: "countries/:countryName", element: <Country /> },
       ],
     },
   ]);

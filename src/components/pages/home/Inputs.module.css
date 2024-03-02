@@ -34,7 +34,6 @@
 .inputs{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 
@@ -55,4 +54,41 @@
 .input:focus{
     border: none; 
     outline: none; 
+}
+
+
+/* ==================================== 
+   =============== 850 px =============
+   ==================================== */
+
+@media (max-width:53.125em) {
+    .wrapper--search-input{
+        width: 35rem;
+    }
+}
+
+
+/* ==================================== 
+   =============== 720 px =============
+   ==================================== */
+
+@media (max-width:45em) {
+    .wrapper--search-input{
+        width: 25rem;
+    }
+}
+
+
+/* ==================================== 
+   =============== 620 px =============
+   ==================================== */
+@media (max-width:38.75em) {
+    .inputs{
+         flex-direction: column;
+         gap: 4.8rem;
+    }
+
+    .wrapper--search-input{
+        width: 100%;
+    }
 }

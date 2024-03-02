@@ -1,10 +1,6 @@
 .ul{
+    margin: 0 auto;
     margin-top: 3.2rem;
     columns: 4 30rem;
-    /* display: grid;
-    grid-template-columns:repeat(4, 30rem);
-    justify-content: space-between; 
-    gap: 4.8rem;
-    */
-
+    /* RESEARCH:  How to make set justify content: space between in Column attribute */
 }
