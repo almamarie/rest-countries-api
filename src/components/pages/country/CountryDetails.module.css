@@ -78,23 +78,34 @@
 .border-countries-wrapper{
     max-width: 100%;
 
-    display: grid;
+    /* display: grid;
     align-items: center;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% 70%; */
+    display: flex;
 
 }
 
-.border-countries{
-    max-width: 100%;
-    overflow: scroll;
+.border-countries-wrapper .title {
+    width: 20rem;
+}
 
+
+.scroll {
+    /* background-color: red; */
+    width: 40rem;
+    overflow: scroll;
+}
+
+.border-countries{
     display: flex;
     gap: 1.2rem;
 
 }
 
 .border-link{
-    padding: .8rem 1.6rem;
+    /* padding: .8rem 1.6rem; */
+
+    width: 10rem;
 
     background-color: var(--color-bg__inner);
     border-radius: var(--default-border-radius);

@@ -23,7 +23,7 @@ const CountryDetails = () => {
 
       const response = await fetch(`https://restcountries.com/v3.1/all`);
       if (!response.ok) {
-        console.log("here errorm skvsvdsldvn");
+        console.log("Error fetching");
         setIsLoading(false);
         setError(true);
       } else {
@@ -61,6 +61,7 @@ const CountryDetails = () => {
     console.log("Here 2");
     return <h3>An error occured</h3>;
   } else if (!isLoading && !error && country) {
+    console.log("Country: ", country);
     return (
       <div className={styles.wrapper}>
         <button className={styles.button} type="text" onClick={goBack}>
@@ -88,7 +89,7 @@ const CountryDetails = () => {
             alt="country flag"
           />
           <div className={styles.details}>
-            <h3 className={styles.heading}>Belgium</h3>
+            <h3 className={styles.heading}>{country.name.official}</h3>
             <div className={styles["details-uls"]}>
               <ul className={styles["details-uls__1"]}>
                 <li>
@@ -111,7 +112,9 @@ const CountryDetails = () => {
                 </li>
                 <li>
                   <span className={styles.title}>Capital:</span>{" "}
-                  <span className={styles.text}>{country.capital[0]}</span>
+                  <span className={styles.text}>
+                    {country.capital ? country.capital[0] : "none"}
+                  </span>
                 </li>
               </ul>
               <ul className={styles["details-uls__1"]}>
@@ -122,34 +125,44 @@ const CountryDetails = () => {
                 <li>
                   <span className={styles.title}>Currencies:</span>{" "}
                   <span className={styles.text}>
-                    {Object.keys(country.currencies)[0]}
+                    {country.currencies
+                      ? Object.keys(country.currencies)[0]
+                      : "none"}
                   </span>
                 </li>
                 <li>
                   <span className={styles.title}>Languages:</span>{" "}
                   <span className={styles.text}>
-                    {Object.values(country.languages).join(", ")}
+                    {country.languages
+                      ? Object.values(country.languages).join(", ")
+                      : "none"}
                   </span>
                 </li>
               </ul>
             </div>
 
-            {country.borders && (
-              <div className={styles["border-countries-wrapper"]}>
-                <span className={styles.title}>Border Countries: </span>
-                <ul className={styles["border-countries"]}>
-                  {country.borders.map((name, index) => {
-                    return (
-                      <li key={index} className={styles["border-link"]}>
-                        <Link href={`/countries/${name.official}`}>
-                          {name.common}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+            <div className={styles["border-countries-wrapper"]}>
+              <span className={styles.title}>Border Countries: </span>
+
+              <div className={styles.scroll}>
+                {" "}
+                {country.borders.length > 0 ? (
+                  <ul className={styles["border-countries"]}>
+                    {country.borders.map((nam, index) => {
+                      return (
+                        <li key={index} className={styles["border-link"]}>
+                          <Link to={`/countries/${nam.official}`}>
+                            {nam.common}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : (
+                  "none"
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
