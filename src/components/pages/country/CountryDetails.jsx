@@ -151,7 +151,7 @@ const CountryDetails = () => {
                     {country.borders.map((nam, index) => {
                       return (
                         <li key={index} className={styles["border-link"]}>
-                          <Link to={`/countries/${nam.official}`}>
+                          <Link to={`/countries/${nam.official}`} className={styles.link}>
                             {nam.common}
                           </Link>
                         </li>
