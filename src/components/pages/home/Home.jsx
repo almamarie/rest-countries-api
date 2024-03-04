@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 import Inputs from "./Inputs";
 import Countries from "./Countries";
+import Loader from "../../loader/Loader";
 
 const Home = () => {
   console.log("Rerendering");
@@ -11,6 +12,7 @@ const Home = () => {
         <Inputs />
       </div>
       <Countries />
+      {/* <Loader /> */}
     </div>
   );
 };
